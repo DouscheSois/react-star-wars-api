@@ -5,7 +5,7 @@ import goLiveIcon from "../media/golive.svg";
 const Bottom = () => {
   return (
     <div className="bottom">
-      <h1>Made By Roger Alexander</h1>
+      <h1>Made by Roger Alexander</h1>
       <div className="links">
         <a href="https://www.github.com/douschesois/">
           <img src={githubIcon} alt="Github" />

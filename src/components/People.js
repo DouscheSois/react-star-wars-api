@@ -10,7 +10,6 @@ const People = () => {
         let data = await res.json();
 
         setPeople(data.results);
-        console.log(data.results);
       } catch (e) {
         console.error(e.message);
       }
@@ -21,13 +20,18 @@ const People = () => {
 
   return (
     <div className="people-data">
-      <ul>
+      <h1>Characters</h1>
+      <div className="people-data-card">
         {people.map((person, key) => (
-          <li key={key}>
-            {person.name},{person.gender}, {person.homeworld}
-          </li>
+          <div className="card-item">
+            <h4>{person.name}</h4>
+            <h4>Height: {person.height}cm</h4>
+            <h4>Mass: {person.mass}kg</h4>
+            <h4>M/F: {person.gender}</h4>
+            <h4>Birth Year: {person.birth_year}</h4>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
