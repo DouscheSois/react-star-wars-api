@@ -19,14 +19,21 @@ const Films = () => {
   }, []);
 
   return (
-    <div className="films-data">
-      <ul>
-        {films.map((film, key) => (
-          <li key={key}>
-            {film.title}, {film.release_date}
-          </li>
-        ))}
-      </ul>
+    <div className="body-content">
+      <div className="films-data">
+        <h1>Films</h1>
+        <div className="films-data-card">
+          {films.map((film, key) => (
+            <div className="film-card-item" key={key}>
+              <h4>
+                {film.title}, {film.release_date}
+              </h4>
+              <h4>Episode: {film.episode_id}</h4>
+              <h4>{film.opening_crawl}</h4>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

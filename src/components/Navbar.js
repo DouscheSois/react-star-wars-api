@@ -1,19 +1,19 @@
 import React, { Fragment } from "react";
 
-const Body = () => {
+const Navbar = () => {
   return (
     <Fragment>
       <div className="navbar">
         <li>
-          <a href="#">People</a>
+          <a href="/people">Characters</a>
         </li>
         <li>
-          <a className="planets-blue" href="#">
+          <a className="planets-blue" href="/planets">
             Planets
           </a>
         </li>
         <li>
-          <a className="films-green" href="#">
+          <a className="films-green" href="/films">
             Films
           </a>
         </li>
@@ -22,4 +22,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Navbar;
