@@ -5,13 +5,13 @@ This is an App that connects to the Star Wars API and displays information about
 
 Live Link: {}
 
-<img src="src/media/img1.png" width="500" height="400">
+<img src="src/media/img1.png" width="600" height="500">
 <hr />
-<img src="src/media/img2.png" width="500" height="400">
+<img src="src/media/img2.png" width="600" height="500">
 <hr />
-<img src="src/media/img3.png" width="500" height="400">
+<img src="src/media/img3.png" width="600" height="500">
 <hr />
-<img src="src/media/img4.png" width="500" height="400">
+<img src="src/media/img4.png" width="600" height="500">
 
 
 <h2>Summary</h2>
