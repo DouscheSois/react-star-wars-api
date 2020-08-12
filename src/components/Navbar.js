@@ -1,24 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <Fragment>
-      <div className="navbar">
-        <li>
-          <a href="/people">Characters</a>
-        </li>
-        <li>
-          <a className="planets-blue" href="/planets">
-            Planets
-          </a>
-        </li>
-        <li>
-          <a className="films-green" href="/films">
-            Films
-          </a>
-        </li>
-      </div>
-    </Fragment>
+    <div className="navbar">
+      <li>
+        <Link to="/people">Characters</Link>
+      </li>
+      <li>
+        <Link to="/planets">Planets</Link>
+      </li>
+      <li>
+        <Link to="/films">Films</Link>
+      </li>
+    </div>
   );
 };
 

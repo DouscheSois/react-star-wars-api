@@ -1,5 +1,5 @@
 import React from "react";
-
+import Darth from "../media/darth.png";
 const Home = () => {
   // const [loading, setLoading] = useState([]);
 
@@ -12,6 +12,9 @@ const Home = () => {
       </h5>
 
       <h4>Start by Navigating Above</h4>
+      <img src={Darth} alt="Darth Vador" height="200px" width="200px" />
+      <br />
+      <small>Sith Territory</small>
     </div>
   );
 };

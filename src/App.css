@@ -6,11 +6,11 @@ body {
 .navbar {
   background-color: white;
   color: black;
-  padding: 2rem;
+  padding: 1rem;
   opacity: 0.5;
   display: flex;
   flex-flow: nowrap;
-  justify-content: center;
+  justify-content: space-around;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -18,34 +18,23 @@ body {
 
 .navbar li {
   list-style: none;
-  margin: 0.5rem;
+  background-color: black;
+  padding: 0.5rem;
+  width: 10rem;
+  text-align: center;
 }
 
 .navbar li a {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   text-decoration: none;
-  color: black;
-  background-color: #3b6978;
+  color: white;
 }
 
 .navbar:hover {
   opacity: 0.7;
 }
 
-.navbar li a:hover {
+.navbar li:hover {
   background-color: red;
-  color: white;
-}
-
-.navbar .planets-blue:hover {
-  background-color: blue;
-  color: white;
-}
-.navbar .films-green:hover {
-  background-color: green;
   color: white;
 }
 
@@ -183,5 +172,10 @@ body {
 @media (max-width: 700px) {
   .navbar li a {
     padding: 1.3rem;
+  }
+
+  .navbar {
+    flex-flow: column;
+    align-items: center;
   }
 }
