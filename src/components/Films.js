@@ -6,7 +6,7 @@ const Films = () => {
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        let res = await fetch("http://swapi.dev/api/films/");
+        let res = await fetch("https://swapi.dev/api/films/");
         let data = await res.json();
 
         setFilms(data.results);

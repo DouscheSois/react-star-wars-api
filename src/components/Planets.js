@@ -6,7 +6,7 @@ const Planets = () => {
   useEffect(() => {
     const fetchPlanets = async () => {
       try {
-        let res = await fetch("http://swapi.dev/api/planets/");
+        let res = await fetch("https://swapi.dev/api/planets/");
         let data = await res.json();
 
         setPlanets(data.results);

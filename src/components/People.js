@@ -6,7 +6,7 @@ const People = () => {
   useEffect(() => {
     const fetchPeople = async () => {
       try {
-        let res = await fetch("http://swapi.dev/api/people/");
+        let res = await fetch("https://swapi.dev/api/people/");
         let data = await res.json();
 
         setPeople(data.results);
