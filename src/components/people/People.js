@@ -1,41 +1,39 @@
 import React, { useEffect, useState } from "react";
 
+import { Link } from "react-router-dom";
+
+import PeopleCardItem from "../PeopleCardItem";
+import Pagination from "../Pagination";
+
 const People = () => {
   const [people, setPeople] = useState([]);
+
+  const baseURL = "https://swapi.dev/api/people/?page=";
+  const pageNumber = 1;
 
   useEffect(() => {
     const fetchPeople = async () => {
       try {
-        let res = await fetch("https://swapi.dev/api/people/");
+        let res = await fetch(`${baseURL}${pageNumber}`);
         let data = await res.json();
-
         setPeople(data.results);
+        console.log(data);
       } catch (e) {
         console.error(e.message);
       }
     };
-
     fetchPeople();
   }, []);
-
-  //look at video 13:32
 
   return (
     <div className="body-content">
       <div className="people-data">
-        <h1>Characters</h1>
+        <h1>Characters Pg. 1</h1>
         <div className="people-data-card">
-          {people.map((person, key) => (
-            <div className="people-card-item" key={key}>
-              <h4>{person.name}</h4>
-              <h4>Height: {person.height}cm</h4>
-              <h4>Mass: {person.mass}kg</h4>
-              <h4>M/F: {person.gender}</h4>
-              <h4>Birth Year: {person.birth_year}</h4>
-            </div>
-          ))}
+          <PeopleCardItem people={people} />
         </div>
       </div>
+      <Pagination />
     </div>
   );
 };

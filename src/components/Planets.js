@@ -18,9 +18,6 @@ const Planets = () => {
     fetchPlanets();
   }, []);
 
-  // ask how to make homeworld appear
-  //How to make this into a nice number
-
   return (
     <div className="body-content">
       <div className="planets-data">
