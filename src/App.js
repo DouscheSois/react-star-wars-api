@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -20,7 +20,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <Fragment>
+    <>
       <Router>
         <Navbar />
         <Switch>
@@ -63,7 +63,7 @@ const App = () => {
         </Switch>
       </Router>
       <Bottom />
-    </Fragment>
+    </>
   );
 };
 
